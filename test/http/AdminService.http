@@ -1,0 +1,96 @@
+@server = http://localhost:4004
+@auth = Authorization: Basic alice:
+
+
+### Employees
+# @name Employees_GET
+GET {{server}}/odata/v4/admin/Employees
+{{auth}}
+
+
+### Employees
+# @name Employees_POST
+POST {{server}}/odata/v4/admin/Employees
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "19096944-fb68-45a4-82e9-77ee7e0007e9",
+  "name": "name-190969",
+  "email": "email-190969",
+  "department": "department-190969",
+  "role": "role-190969",
+  "avatar": "avatar-190969"
+}
+
+
+### Employees
+# @name Employees_PATCH
+PATCH {{server}}/odata/v4/admin/Employees/19096944-fb68-45a4-82e9-77ee7e0007e9
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "19096944-fb68-45a4-82e9-77ee7e0007e9",
+  "name": "name-190969",
+  "email": "email-190969",
+  "department": "department-190969",
+  "role": "role-190969",
+  "avatar": "avatar-190969"
+}
+
+
+### Employees
+# @name Employees_DELETE
+DELETE {{server}}/odata/v4/admin/Employees/19096944-fb68-45a4-82e9-77ee7e0007e9
+Content-Type: application/json
+{{auth}}
+
+
+### Vacations
+# @name Vacations_GET
+GET {{server}}/odata/v4/admin/Vacations
+{{auth}}
+
+
+### Vacations
+# @name Vacations_POST
+POST {{server}}/odata/v4/admin/Vacations
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "22576730-6d5b-4fe3-9523-40a121a06df9",
+  "employee": {
+    "ID": "19096944-fb68-45a4-82e9-77ee7e0007e9"
+  },
+  "startDate": "2006-11-05",
+  "endDate": "2001-04-08",
+  "submittedAt": "2001-09-25T00:00:00.000Z",
+  "status": "PENDING"
+}
+
+
+### Vacations
+# @name Vacations_PATCH
+PATCH {{server}}/odata/v4/admin/Vacations/22576730-6d5b-4fe3-9523-40a121a06df9
+Content-Type: application/json
+{{auth}}
+
+{
+  "ID": "22576730-6d5b-4fe3-9523-40a121a06df9",
+  "employee": {
+    "ID": "19096944-fb68-45a4-82e9-77ee7e0007e9"
+  },
+  "startDate": "2006-11-05",
+  "endDate": "2001-04-08",
+  "submittedAt": "2001-09-25T00:00:00.000Z",
+  "status": "PENDING"
+}
+
+
+### Vacations
+# @name Vacations_DELETE
+DELETE {{server}}/odata/v4/admin/Vacations/22576730-6d5b-4fe3-9523-40a121a06df9
+Content-Type: application/json
+{{auth}}
