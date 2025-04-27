@@ -1,5 +1,4 @@
 namespace jaldb;
-
 entity Employee {
   key ID         : UUID;
   name           : String;
@@ -9,7 +8,6 @@ entity Employee {
   avatar         : String;
   vacations      : Association to many Vacation on vacations.employee = $self;
 }
-
 entity Vacation {
   key ID         : UUID;
   employee       : Association to Employee;

@@ -1,0 +1,31 @@
+### Get Employees
+GET http://localhost:4004/VacationService/Employees
+Accept: application/json
+
+### Get Vacations
+GET http://localhost:4004/VacationService/Vacations
+Accept: application/json
+
+### Create New Employee
+POST http://localhost:4004/VacationService/Employees
+Content-Type: application/json
+
+{
+  "name": "David Johnson",
+  "email": "david@company.com",
+  "department": "Marketing",
+  "role": "Marketing Manager",
+  "avatar": "david.jpg"
+}
+
+### Create New Vacation
+POST http://localhost:4004/VacationService/Vacations
+Content-Type: application/json
+
+{
+  "employee_ID": "PUT-EXISTING-EMPLOYEE-ID-HERE",
+  "startDate": "2025-08-05",
+  "endDate": "2025-08-15",
+  "submittedAt": "2025-04-27T12:00:00Z",
+  "status": "PENDING"
+}
